@@ -53,7 +53,7 @@ async function startWorker(address) {
 
             const addr = genAddr.replace("0x", "").toLowerCase();
 
-            const checkAddr = addr.slice(0, 20) // check first 20 chars
+            const checkAddr = addr.slice(0, 10) // check first 20 chars
 
             if (checkAddr.includes(prefix)) {
 
