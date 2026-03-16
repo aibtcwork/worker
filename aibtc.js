@@ -51,7 +51,9 @@ async function startWorker(address) {
 
             const genAddr = generateAddress(address, seed1, seed2);
 
-            const addr = genAddr.replace("0x", "").toLowerCase();
+            let addr = genAddr.replace("0x", "").toLowerCase();
+
+            addr = addr.slice(0, 20); // check first 20 chars
 
             if (addr.includes(prefix)) {
 
